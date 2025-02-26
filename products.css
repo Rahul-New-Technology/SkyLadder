@@ -1,0 +1,426 @@
+@charset "UTF-8";
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.headercont {
+    width: 100%;
+    background: transparent; /* Default background */
+    height: 80px;
+    transition: background 0.4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+.headercont-scrolled {
+    background: white; /* Background color when scrolled */
+}
+
+.header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  z-index: 100;
+  padding: 0 20px;
+  background: #646869;
+}
+
+.header ul a {
+  color: white;
+}
+
+.header .nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav,
+.nav_item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_logo,
+.nav_link,
+.button {
+  color: black;
+  font-size: 20px;
+}
+
+.nav_logo {
+  font-size: 25px;
+}
+
+.nav_item {
+  column-gap: 25px;
+}
+
+.nav_link:hover {
+  color: black;
+}
+
+.button {
+  padding: 2px 10px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 25px;
+}
+
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+.cart i {
+  font-size: 25px;
+  color: white;
+  padding-left: 200px;
+}
+
+#logout {
+  border: 2px solid black;
+  background: #646869;
+  border: none;
+}
+
+#logout a {
+  color: white;
+  font-size: 25px;
+}
+
+/* Product model design */
+.container {
+  width: 98%;
+  padding-top: 80px;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 100vh;
+  justify-content: space-around;
+  overflow-y: auto;
+}
+
+.products-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow rows to wrap to the next line if needed */
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product {
+  width: 200px;
+  margin: 10px;
+  height: fit-content;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.buy-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+
+.modal {
+  width: 28%;
+  height: 550px;
+  margin-left: 30px;
+  overflow-y: scroll;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  color: red;
+  max-width: 400px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  color: black;
+  margin-right: 430px;
+  z-index: 30;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  text-align: center;
+    margin-right:18px;
+  
+  padding-top: 30px;
+}
+
+.modal-info {
+  padding: 40px;
+  text-align: left;
+
+  
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  max-width: 600px; /* Limit the width for better readability */
+  margin: 20px; /* Center the modal and add vertical spacing */
+  border: 1px solid #ddd; /* Light border for a defined edge */
+  font-family: Arial, sans-serif; /* Consistent font family */
+  color: #333; /* Dark text color for readability */
+}
+
+/* Product model end */
+#caption h4 {
+  font-weight: bold; /* Makes the text bold */
+  color: #ff4500; /* Orange color for contrast */
+  background-color: #f0f8ff; /* Light background color to make text stand out */
+  padding: 10px; /* Adds space inside the background */
+  border-radius: 5px; /* Rounds the corners of the background */
+  border: 2px solid #ff4500; /* Adds a border around the text */
+  margin: 0; /* Ensures no extra space outside the element */
+  display: inline-block; /* Ensures that height changes without affecting layout */
+  animation: pop-height 1s ease-in-out infinite; /* Adds a height-only pop animation */
+}
+
+@keyframes pop-height {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(1.1); } /* Increases height by 10% */
+  100% { transform: scaleY(1); }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .header .nav {
+    padding: 0 10px;
+  }
+
+  .product {
+    width: 150px;
+  }
+
+  .modal {
+    width: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 0 10px;
+  }
+
+  .nav_item {
+    flex-direction: column;
+  }
+
+  .nav_logo {
+    font-size: 20px;
+  }
+
+  .nav_link,
+  .button {
+    font-size: 18px;
+  }
+
+  .product {
+    width: 120px;
+  }
+
+  .modal {
+    width: 40%;
+  }
+
+  .cart i {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 10px;
+    background: #646869;
+  }
+
+  .nav_item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_logo {
+    font-size: 18px;
+  }
+
+  .nav_link,
+  .button {
+    font-size: 16px;
+  }
+
+  .product {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .modal {
+    width: 80%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .cart i {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 5px;
+  }
+
+  .nav_logo {
+    font-size: 16px;
+  }
+
+  .nav_link,
+  .button {
+    font-size: 14px;
+  }
+
+  .product {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .modal {
+    width: 100%;
+  }
+}
+
+.products-grid::-webkit-scrollbar {
+  width: 1px;
+ 
+}
+
+.products-grid::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 6px;
+}
+
+.products-grid::-webkit-scrollbar-thumb:hover {
+  background: #00ff00;
+}
+
+.products-grid::-webkit-scrollbar-track {
+  background: #ff00ff;
+  border-radius: 6px;
+}
+
+/* Custom scrollbar for Firefox */
+.products-grid {
+  scrollbar-width: thin;
+ 
+  scrollbar-color: white crimson;
+}
+
+.modal::-webkit-scrollbar {
+  width: 1px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 6px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #00ff00;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #ff00ff;
+  border-radius:10px;
+}
+
+/* Custom scrollbar for Firefox */
+.modal {
+  scrollbar-width: thin;
+  scrollbar-color: white crimson;
+}

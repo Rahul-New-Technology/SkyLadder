@@ -1,0 +1,348 @@
+
+@charset "UTF-8";
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.headercont {
+    width: 100%;
+    background: transparent; /* Default background */
+    height: 80px;
+    transition: background 0.4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.headercont-scrolled {
+    background: white; /* Background color when scrolled */
+}
+
+.header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  z-index: 100;
+  padding: 0 20px;
+  background: #646869;
+}
+
+.header ul a {
+  color: white;
+}
+
+.header .nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav,
+.nav_item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_logo,
+.nav_link,
+.button {
+  color: black;
+  font-size: 20px;
+}
+
+.nav_logo {
+  font-size: 25px;
+}
+
+.nav_item {
+  column-gap: 25px;
+}
+
+.nav_link:hover {
+  color: black;
+}
+
+.button {
+  padding: 2px 10px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 25px;
+}
+
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+.cart i {
+  font-size: 25px;
+  color: white;
+  padding-left: 200px;
+}
+
+#logout {
+  border: 2px solid black;
+  background: #646869;
+  border: none;
+}
+
+#logout a {
+  color: white;
+  font-size: 25px;
+}
+
+.container {
+  width: 98%;
+  padding-top: 80px;
+
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 48%;
+  height: 100vh;
+  justify-content: space-around;
+  overflow-y: auto;
+}
+
+.products-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow rows to wrap to the next line if needed */
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product {
+  width: 230px;
+  margin: 10px;
+  height: fit-content;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.buy-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  float:left;
+  
+}
+.Delete-button{
+
+  color: red;
+  font-size:20px;
+  float:right;
+  cursor: pointer;
+  margin-top: 13px;
+
+}
+.numberInput{
+	
+	width:50px;
+	margin-top:20px;
+	text-align: center;
+	font-size:20px;
+	font-style:italic;
+	
+}
+.quantitiyproduct{
+	font-weight:600px;
+	font-style: bold;
+}
+.buy-button:hover {
+  background-color: #45a049;
+}
+
+
+
+.products-grid::-webkit-scrollbar {
+  width: 1px;
+ 
+}
+
+.products-grid::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 6px;
+}
+
+.products-grid::-webkit-scrollbar-thumb:hover {
+  background: #00ff00;
+}
+
+.products-grid::-webkit-scrollbar-track {
+  background: #ff00ff;
+  border-radius: 6px;
+}
+
+/* Custom scrollbar for Firefox */
+.products-grid {
+  scrollbar-width: thin;
+ 
+  scrollbar-color: white crimson;
+}
+.modal {
+  width: 50%;
+  height: 550px;
+  margin-left: 30px;
+  overflow-y: scroll;
+    
+  
+}
+
+.modal-content {
+ 
+  display: block;
+  width: 80%;
+  color: red;
+  max-width: 400px;
+ 
+}
+
+
+
+#caption {
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin-right:15px;
+  padding-top: 30px;
+}
+
+#caption h4 {
+  font-weight: bold; /* Makes the text bold */
+  color: crimson; /* Orange color for contrast */
+  background-color: #f0f8ff; /* Light background color to make text stand out */
+  padding: 10px; /* Adds space inside the background */
+  border-radius: 5px; /* Rounds the corners of the background */
+  border: 2px solid #ff4500; /* Adds a border around the text */
+  margin: 0; /* Ensures no extra space outside the element */
+  display: inline-block; /* Ensures that height changes without affecting layout */
+  animation: pop-height 1s ease-in-out infinite; /* Adds a height-only pop animation */
+}
+
+@keyframes pop-height {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(1.1); } /* Increases height by 10% */
+  100% { transform: scaleY(1); }
+}
+
+
+.modal::-webkit-scrollbar {
+  width: 1px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 6px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #00ff00;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #ff00ff;
+  border-radius:10px;
+}
+ table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+/* Custom scrollbar for Firefox */
+.modal {
+  scrollbar-width: thin;
+  scrollbar-color: white crimson;
+}
+
+ .order-form {
+            margin: 20px 0; /* Space around the form */
+        }
+
+        .order-form input, .order-form select, .order-form button {
+            display: block;
+            width: 100%;
+            margin: 10px 0; /* Space between fields */
+            padding: 10px; /* Space inside fields */
+            border: 1px solid #ccc; /* Border around fields */
+            border-radius: 5px; /* Rounded corners */
+            box-sizing: border-box; /* Ensures padding and border are included in width */
+        }
+
+        .order-form button {
+            background-color: crimson; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Removes default border */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
+        .order-form button:hover {
+            background-color: #d40000; /* Darker button color on hover */
+        }
