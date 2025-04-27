@@ -20,7 +20,7 @@
 		</div>
 		<ul class="nav-links">
 			<li><a href="" class="active"> <i class='bx bx-grid-alt'></i>
-					<span class="links_name">Dashboard</span>
+					<span class="links_name">Dashboard created by  rahul</span>
 			</a></li>
 			<li><a href="addproduct"> <i class='bx bx-box'></i> <span
 					class="links_name">Add Product</span>
